@@ -11,39 +11,18 @@ import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
 const features = [
   {
     icon: Warehouse,
-    title: 'Advanced Warehousing',
-    description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
+    title: 'Remote Control',
     image: warehouseImg,
   },
   {
-    icon: Truck,
-    title: 'Fast Transportation',
-    description: 'Multi-modal logistics network ensuring rapid delivery across all destinations.',
+    icon: Shield,
+    title: 'Automatic Alerts',
     image: truckImg,
   },
   {
-    icon: Package,
-    title: 'Quality Manufacturing',
-    description: 'ISO-certified production with precision engineering and quality control.',
-    image: packageImg,
-  },
-  {
     icon: BarChart3,
-    title: 'Real-Time Analytics',
-    description: 'Complete supply chain visibility with advanced tracking and reporting.',
-    image: barChart3Img,
-  },
-  {
-    icon: Shield,
-    title: 'Secure Operations',
-    description: 'Industry-leading security protocols protecting your valuable assets.',
-    image: shieldImg,
-  },
-  {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock to ensure seamless operations.',
-    image: headphonesImg,
+    title: 'ATMT PRO MISSING DEVICE REPORT',
+    image: packageImg,
   },
 ];
 

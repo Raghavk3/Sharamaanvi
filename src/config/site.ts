@@ -8,16 +8,15 @@ export const SITE = {
 
 export const NAVIGATION = [
   { name: 'Home', href: '/' },
-  { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Use Cases', href: '/use-cases' },
-  { name: 'Facilities', href: '/facilities' },
-  { name: 'Request Quote', href: '/rfq' },
-  { name: 'Documentation', href: '/documentation' },
+  { name: 'Our Product', href: '/capabilities' },
+  { name: 'Privacy Policy', href: '/use-cases' },
+  { name: 'Terms & Conditions', href: '/facilities' },
+  { name: 'FAQs', href: '/rfq' },
 ] as const;
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/company/yourcompany',
   twitter: 'https://twitter.com/yourcompany',
-  facebook: 'https://facebook.com/yourcompany',
+  facebook: 'https://www.facebook.com/profile.php?id=61583384643740',
 } as const;
 
