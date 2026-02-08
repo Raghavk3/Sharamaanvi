@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Button from '../ui/Button.astro';
 import heroBgImg from '@assets/photo-1586528116311-ad8dd3c8310d.jpg';
+import logoImg from 'public/Sharamaanvilogo.png';
 ---
 
 <section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">
@@ -21,47 +22,44 @@ import heroBgImg from '@assets/photo-1586528116311-ad8dd3c8310d.jpg';
 
   <!-- Content -->
   <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl">
-      
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        Optimize Your Operations with
-        <span class="block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400 mt-2">
-          Sharamaanvi
-        </span>
-      </h1>
-      
-      <p class="text-lg md:text-lg text-slate-200 mb-8 max-w-2xl leading-relaxed">
-        Sharamaanvi is a leading digital security firm specializing in mobile security solutions, data protection, and secure devices. Through our flagship product, ATMT PRO, From advanced anti-theft sirens and remote camera tracking to dedicated women’s safety features and data recovery tools, we provide a complete mobile security suite designed to safeguard individuals and businesses from theft and emergencies.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 mb-9">
-        <Button href="" size="lg" class="bg-blue-600! hover:bg-blue-700! text-white! shadow-2xl!">
-          Contact Us
-        </Button>
-        <Button href="/capabilities" size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
-          Our Product
-        </Button>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <!-- Left Content -->
+      <div class="max-w-4xl">
+        
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          Optimize Your Operations with
+          <span class="block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400 mt-2">
+            Sharamaanvi
+          </span>
+        </h1>
+        
+        <p class="text-lg md:text-lg text-slate-200 mb-8 max-w-2xl leading-relaxed">
+          Sharamaanvi is a leading digital security firm specializing in mobile security solutions, data protection, and secure devices. Through our flagship product, ATMT PRO, From advanced anti-theft sirens and remote camera tracking to dedicated women's safety features and data recovery tools, we provide a complete mobile security suite designed to safeguard individuals and businesses from theft and emergencies.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-9">
+          <Button href="" size="lg" class="bg-blue-600! hover:bg-blue-700! text-white! shadow-2xl!">
+            Contact Us
+          </Button>
+          <Button href="/capabilities" size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
+            Our Product
+          </Button>
+        </div>
       </div>
 
-      <!-- Quick Stats -->
-      <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-1 border-t border-white/20">
-        <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">500+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">Global Clients</div>
+      <!-- Right Logo -->
+      <div class="hidden lg:flex justify-center items-center">
+        <div class="relative w-full max-w-md xl:max-w-lg">
+          <Image 
+            src={logoImg}
+            alt="ATMT PRO Logo"
+            class="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300 drop-shadow-2xl"
+            width={2160}
+            height={2160}
+            decoding="async"
+          />
         </div>
-        <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">50M+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">Units Shipped</div>
-        </div>
-        <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">99.9%</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">On-Time</div>
-        </div>
-        <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">15+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">Facilities</div>
-        </div>
-      </div> -->
+      </div>
     </div>
   </div>
 
@@ -72,4 +70,3 @@ import heroBgImg from '@assets/photo-1586528116311-ad8dd3c8310d.jpg';
     </svg>
   </div>
 </section>
-
