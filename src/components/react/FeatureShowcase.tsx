@@ -92,9 +92,9 @@ function AnimatedCounter() {
 
 export default function FeatureShowcase() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12">
       {/* Logo and Counter Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-24 px-4 py-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 px-4 py-4">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

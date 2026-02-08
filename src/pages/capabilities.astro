@@ -7,9 +7,9 @@ import CapabilityAccordion from '../components/react/CapabilityAccordion';
 import { Image } from 'astro:assets';
 import ImageReveal from '../components/react/ImageReveal';
 
-import warehouseImg from '@assets/photo-1566576721346-d4a3b4eaeb55.jpg';
-import manufacturingImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
-import transportationImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
+import RC from '@assets/RA.png';
+import manufacturingImg from '@assets/AUTOMATIC ALERTS.png';
+import transportationImg from '@assets/ATMT PRO MISSING DEVICE REPORT.png';
 import supplyChainImg from '@assets/photo-1460925895917-afdab827c52f.jpg';
 import valueAddedServicesImg from '@assets/photo-1558618666-fcd25c85cd64.jpg';
 import technologyIntegrationImg from '@assets/photo-1558494949-ef010cbdcc31.jpg';
@@ -18,93 +18,43 @@ import ctaBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 
 const capabilities = [
   {
-    title: 'Warehousing & Storage',
-    description: 'State-of-the-art warehousing facilities equipped with advanced inventory management systems, climate control, and 24/7 security.',
+    title: 'Remote Control',
+    description: 'Remote control allows you to perform many operations on your lost or stolen device, like:',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
     </svg>`,
-    image: warehouseImg,
+    image: RC,
     features: [
-      'Climate-controlled storage',
-      'Automated inventory tracking',
-      'Cross-docking capabilities',
-      'Hazmat certified facilities',
-      'Real-time stock visibility'
+      'Locate and track it.',
+      'Take a photo to identify the thief.',
+      'Get a location link, to see where the device has been in the past.',
+      'Thief image and new sim number.',
     ]
   },
   {
-    title: 'Manufacturing Services',
-    description: 'ISO 9001 certified manufacturing with precision engineering, quality control, and flexible production capabilities.',
+    title: 'Automatic Alerts',
+    description: 'ATMT PRO app can automatically perform actions when some conditions are meet. For instance',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
     </svg>`,
     image: manufacturingImg,
     features: [
-      'CNC machining & fabrication',
-      'Assembly & kitting',
-      'Quality inspection',
-      'Prototype development',
-      'Custom tooling & fixtures'
+      'It will send SMS alerts if the SIM card is changed.',
+      'It will SMS you a photo of the thief when a wrong unlock code is entered (section "Automatic photo capture").',
+      'A lot of more automatic actions and alerts.',
     ]
   },
   {
-    title: 'Transportation & Distribution',
-    description: 'Comprehensive multi-modal transportation network ensuring efficient, reliable delivery across all regions.',
+    title: 'ATMT PRO MISSING DEVICE REPORT',
+    description: 'The Reports are our key feature because all the evidence they gather and deliver gives you a chance to track, find and recover your lost android devices and rebel against theft or loss. Each periodic report includes:',
     icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
     </svg>`,
     image: transportationImg,
     features: [
-      'Ground transportation (LTL/FTL)',
-      'Air freight services',
-      'Ocean freight',
-      'Last-mile delivery',
-      'Route optimization'
-    ]
-  },
-  {
-    title: 'Supply Chain Management',
-    description: 'End-to-end supply chain solutions with advanced analytics, forecasting, and optimization capabilities.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-    </svg>`,
-    image: supplyChainImg,
-    features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Network design',
-      'Risk management',
-      'Performance analytics'
-    ]
-  },
-  {
-    title: 'Value-Added Services',
-    description: 'Comprehensive value-added services to enhance your product offerings and streamline operations.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-    </svg>`,
-    image: valueAddedServicesImg,
-    features: [
-      'Product labeling & packaging',
-      'Returns management',
-      'Quality inspection',
-      'Kit assembly',
-      'Custom packaging design'
-    ]
-  },
-  {
-    title: 'Technology & Integration',
-    description: 'Advanced technology platform with seamless integration capabilities for complete visibility and control.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>`,
-    image: technologyIntegrationImg,
-    features: [
-      'WMS & TMS integration',
-      'EDI & API connectivity',
-      'Real-time tracking',
-      'Automated reporting',
-      'Mobile applications'
+      'GPS Coordinates: Ideal when pointing the police to track your phone or other device.',
+      'Pictures: Identify the thief using your android phone.',
+      'Device and User Information: Check an activity log, receive any modifications.',
     ]
   }
 ];
@@ -126,25 +76,14 @@ const capabilities = [
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto relative z-10 px-2 sm:px-4 lg:px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-2 mb-6 bg-linear-to-r from-blue-600 to-teal-600 text-white text-sm font-semibold rounded-full shadow-lg">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-          </svg>
-          Comprehensive Solutions
-        </div>
         
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
           Our <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400">
-            Capabilities
+            Product Features
           </span>
       </h1>
-        
-        <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Comprehensive logistics and manufacturing solutions designed to optimize your operations 
-        and drive sustainable growth.
-      </p>
       </div>
     </div>
   </section>
@@ -207,11 +146,8 @@ const capabilities = [
   <!-- Process Section -->
   <Section background="white">
     <div class="text-center mb-16">
-      <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
-        Our Approach
-      </div>
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Our <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">Process</span>
+        Features of <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">ATMT Pro APP</span>
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
         A streamlined approach to deliver exceptional results every time.
@@ -221,33 +157,155 @@ const capabilities = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
         { 
-          step: '01', 
-          title: 'Consultation', 
-          description: 'Understand your unique requirements and challenges',
+          title: 'Wrong 3 times patter/pin lock', 
+          description: 'Photo link and location link will be delivered on two emergency numbers by Text Message.',
           icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>`
         },
         { 
-          step: '02', 
-          title: 'Planning', 
-          description: 'Design customized solutions tailored to your needs',
+          title: 'Female Safety', 
+          description: 'Press 5 Time Power Button - Photo link and location link will be delivered on two emergency numbers by Text Message.',
           icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
           </svg>`
         },
         { 
-          step: '03', 
-          title: 'Implementation', 
-          description: 'Execute with precision and attention to detail',
+          title: 'Remotely Tracking', 
+          description: 'Send a text message written with "ATMT TRACK" (front Camera) from anyones number to your registered mobile number will give you a photo link and location link on your two emergency numbers by text message.',
           icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>`
         },
         { 
-          step: '04', 
-          title: 'Optimization', 
-          description: 'Continuous improvement and performance monitoring',
+          title: 'My Backup (Contact, Messages & Call log)', 
+          description: 'You can save and share your Contact List, Text messages And Call log list in PDF format and share via sharable app.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Home page', 
+          description: 'Home page updates your lock, unlock, and restart, shutdown information with day, date and timing.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Remotely Alarm', 
+          description: 'Make a text message from anyone\'s number to your registered number "ATMT ALT" then your alarm will start ringing in your in your mobile. To turn off the alarm you will have to send a second message "ATM ALTT" even your phone is in silent mode.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Remotely Factory Reset', 
+          description: 'Send text message "ATMT WRAP" from your emergency number to your registered mobile number then your phone will be formatted.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Do Not Power Off', 
+          description: 'Click On Power Lock Manager Option. When your phone is in screen locked condition and anyone is trying to switch off your phone then either your mobile Will not get switched off Or if your mobile become switched off, then you will get Photo Link And Location Link on two emergency Numbers by text Message after your mobile getting switch On.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Boost My Phone', 
+          description: 'Just clean app caches and junk files, boost your phone with ONE click! Kill redundant apps that drain your battery!',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Water Droplet Ejector', 
+          description: 'If your mobile falls into water then you have ON WATER DROPLET EJECTOR option. After that your mobile will get vibrated and also the flashlight will be on. Vibration will remove water droplets from your mobile and Flashlight will heat your mobile.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Offline Location', 
+          description: 'If Your Internet is off & Location is On Then You will get Offline location in a coded format or latitude, longitude format by text message on two emergency number.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Change Language', 
+          description: 'Multiple languages is available you can change application language through this feature.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Know Battery Status', 
+          description: 'Send "ATMT BATTERY" message from anyone\'s number to your registered number... Whether your battery percentage and phone charging is on or not... it will come on your 2 emergency numbers by text message.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Unauthorized SIM Alert', 
+          description: 'If you insert a new SIM Card then you get Photo link and location link on two emergency numbers by Text Message and offline message by new sim card.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'ATMT Call', 
+          description: 'Send "ATMT CALL" message from anyone\'s number to your registered number... Then remotely you will get call back to your emergency number.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'ATMT SOS', 
+          description: 'Set a pin of 4 digit first. (Sensor Activation) Send a text message written with "ATMT SOS" from any number to your registered number. Siren will be start ringing, you have to enter 4 digit password to stop that siren. If you click on "STOP 1" then your call will directly connected to your 1st emergency number and if u click on "STOP 2" then your call will directly connected to your 2nd emergency number.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'ATMT LOCK (For Screenlock)', 
+          description: 'If your mobile screen is unlocked and anyone looking inside any application without your permission then you can send 1 text message written with "ATMT LOCK" on your registered mobile number then your mobile screen will become locked.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'SENSOR ACTIVATION', 
+          description: 'This Feature use for Prevention before Mobile Loss / Stolen.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Application Lock', 
+          description: 'You can lock only ATMT application using 4 digit pin.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'Call Forwarding Status', 
+          description: 'Click on Call Forwarding Status button here you can check whether call forwarding enable from your number if enable you can disable it.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'User Portal', 
+          description: 'You can check your details, By Login your Username & Password which you have entered while registration/sign in ATMT PRO.',
+          icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`
+        },
+                { 
+          title: 'USB Alert', 
+          description: 'Turn on Stop USB Connection first if you connect your mobile to the laptop or computer with data cable then Photo Link & Location Link will be delivered on two Emergency Number by Text Message.',
           icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>`
