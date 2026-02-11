@@ -1,152 +1,257 @@
 ---
 import { Image } from 'astro:assets';
 
-import discoveryImg from '@assets/photo-1454165804606-c3d57bc86b40.jpg';
-import implementationImg from '@assets/photo-1522071820081-009f0129c71c.jpg';
-import optimizationImg from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import supportGrowthImg from '@assets/photo-1552664730-d307ca884978.jpg';
+// You'll need to add these images to your assets folder
+// import phoneSecurityImg from '@assets/phone-security.jpg';
+// import theftProtectionImg from '@assets/theft-protection.jpg';
+// import trackingImg from '@assets/phone-tracking.jpg';
 
-interface Step {
-  number: number;
+interface Feature {
+  icon: string;
   title: string;
   description: string;
-  image: ImageMetadata;
-  alt: string;
-  hoverBorder: string;
-  gradient: string;
-  textColor: string;
+  color: string;
 }
 
-const steps = [
+const features: Feature[] = [
   {
-    number: 1,
-    title: "Discovery & Planning",
-    description: "We analyze your current operations, identify pain points, and design a customized solution that aligns with your business goals.",
-    image: discoveryImg,
-    alt: "Business planning and strategy",
-    hoverBorder: "hover:border-blue-500",
-    gradient: "from-blue-600/90",
-    textColor: "text-blue-600"
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    title: "Remote Web Control",
+    description: "Manage your device from anywhere through our secure web portal at atmthub.com",
+    color: "blue"
   },
   {
-    number: 2,
-    title: "Implementation",
-    description: "Our expert team sets up your infrastructure, integrates systems, and ensures seamless onboarding with minimal disruption.",
-    image: implementationImg,
-    alt: "Team collaboration and implementation",
-    hoverBorder: "hover:border-teal-500",
-    gradient: "from-teal-600/90",
-    textColor: "text-teal-700"
+    icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z",
+    title: "SMS Remote Control",
+    description: "Control your device via text messages from any phone, even without internet",
+    color: "teal"
   },
   {
-    number: 3,
-    title: "Optimization",
-    description: "Continuous monitoring and data-driven improvements ensure your operations become more efficient and cost-effective over time.",
-    image: optimizationImg,
-    alt: "Data analytics and optimization",
-    hoverBorder: "hover:border-blue-500",
-    gradient: "from-blue-600/90",
-    textColor: "text-blue-600"
-  },
-  {
-    number: 4,
-    title: "Support & Growth",
-    description: "Dedicated account management and 24/7 support help you scale operations and adapt to changing market demands.",
-    image: supportGrowthImg,
-    alt: "Customer support and growth",
-    hoverBorder: "hover:border-teal-500",
-    gradient: "from-teal-600/90",
-    textColor: "text-teal-700"
+    icon: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z M15 13a3 3 0 11-6 0 3 3 0 016 0z",
+    title: "Thief Identification",
+    description: "Automatic photo capture and SIM change alerts help identify the thief",
+    color: "blue"
   }
 ];
 
-const arrowPath = "M9 5l7 7-7 7";
+const stats = [
+  { value: "3", label: "Protection Layers", color: "blue" },
+  { value: "24/7", label: "Device Tracking", color: "teal" },
+  { value: "100%", label: "Recovery Focus", color: "blue" }
+];
 ---
 
-<section class="py-24 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <div class="inline-block px-4 py-2 mb-4 bg-teal-100 text-teal-800 text-sm font-semibold rounded-full">
-        How We Work
+<section class="py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50 relative overflow-hidden">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-teal-200/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16 animate-fade-in">
+      <div class="inline-block px-4 py-2 mb-4 bg-gradient-to-r from-blue-100 to-teal-100 text-transparent bg-clip-text text-sm font-semibold rounded-full border border-blue-200/50">
+        <span class="text-blue-800">Advanced Mobile Protection</span>
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        Our Proven <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">Process</span>
+        Keep Your Mobile Secure with <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">ATMT-Pro</span>
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        A streamlined approach designed to deliver results from day one, with continuous optimization and support.
+        The most comprehensive anti-theft solution to recover your misplaced, lost, or stolen Android device
       </p>
     </div>
 
-    <div class="relative">
-      <!-- Connection Line (hidden on mobile) -->
-      <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-linear-to-r from-blue-200 via-teal-200 to-blue-200"></div>
+    <!-- Main Content Box -->
+    <div class="max-w-6xl mx-auto">
+      <!-- Hero Statement Box -->
+      <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12 border border-slate-200/50 hover:shadow-3xl transition-all duration-500 animate-slide-up">
+        <div class="bg-gradient-to-r from-blue-600 to-teal-600 p-8 md:p-12">
+          <div class="flex items-start gap-6">
+            <div class="hidden md:flex items-center justify-center w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm flex-shrink-0">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                More Than Just "Find My Phone"
+              </h3>
+              <p class="text-white/90 text-lg leading-relaxed">
+                ATMT isn't just a phone tracker—it's a complete recovery toolkit with unique features designed to locate your device, identify the thief, and help you recover what's yours. Born from a real theft incident in India, we've grown into a global solution trusted by users worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-        {steps.map((step) => (
-          <div class="relative h-full">
-            <div class={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border-2 border-slate-100 ${step.hoverBorder} relative z-10 flex flex-col h-full`}>
-              <div class="relative h-48 overflow-hidden">
-                <Image 
-                  src={step.image}
-                  alt={step.alt}
-                  class="w-full h-full object-cover"
-                  width={800}
-                  height={400}
-                />
-                <div class={`absolute inset-0 bg-linear-to-t ${step.gradient} to-transparent`}></div>
-                <div class={`absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center ${step.textColor} font-bold text-xl shadow-lg`}>
-                  {step.number}
-                </div>
-              </div>
-              <div class="p-8 flex flex-col flex-1">
-                <h3 class="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
-                <p class="text-slate-600 leading-relaxed flex-1">
-                  {step.description}
-                </p>
-                <div class={`mt-6 flex items-center text-sm ${step.textColor} font-semibold`}>
-                  Learn more
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={arrowPath} />
+        <div class="p-8 md:p-12">
+          <h4 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-teal-600 text-white font-bold text-sm">3</span>
+            The Three Heads of ATMT Pro
+          </h4>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {features.map((feature, index) => (
+              <div 
+                class="group p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border-2 border-slate-100 hover:border-blue-300 hover:shadow-lg transition-all duration-300"
+                style={`animation: slide-up-fade 0.6s ease-out ${index * 0.15}s both`}
+              >
+                <div class={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-${feature.color}-500 to-${feature.color}-600 text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon} />
                   </svg>
                 </div>
+                <h5 class="text-lg font-bold text-slate-900 mb-2">{feature.title}</h5>
+                <p class="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Stats Row -->
+          <div class="grid grid-cols-3 gap-6 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-teal-50 border border-blue-100/50">
+            {stats.map((stat) => (
+              <div class="text-center">
+                <div class={`text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-${stat.color}-600 to-teal-600 mb-2`}>
+                  {stat.value}
+                </div>
+                <div class="text-sm text-slate-600 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Evidence Reports -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200/50 hover:shadow-xl transition-all duration-300 animate-slide-up animation-delay-200">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h5 class="text-xl font-bold text-slate-900 mb-3">Detailed Evidence Reports</h5>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                Our comprehensive missing device reports provide detailed evidence for law enforcement, increasing your chances of recovery.
+              </p>
+              <div class="inline-flex items-center text-sm text-blue-600 font-semibold">
+                Police-ready documentation
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
 
-    <!-- Key Benefits -->
-    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+        <!-- Web Portal -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200/50 hover:shadow-xl transition-all duration-300 animate-slide-up animation-delay-400">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-teal-100 text-teal-600 flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h5 class="text-xl font-bold text-slate-900 mb-3">Unified Web Dashboard</h5>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                Track and manage all your devices from our centralized web portal, accessible anywhere, anytime.
+              </p>
+              <a 
+                href="https://www.atmthub.com" 
+                target="_blank"
+                class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                Visit Dashboard
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">Fast Deployment</h4>
-        <p class="text-slate-600">Get up and running in weeks, not months</p>
       </div>
-      <div class="text-center">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 text-teal-600 mb-4">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
+
+      <!-- Our Mission -->
+      <div class="mt-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 text-white shadow-2xl animate-slide-up animation-delay-600">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-6">
+            <svg class="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h4 class="text-2xl md:text-3xl font-bold mb-6">Our Mission</h4>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            Help our users worry less about theft and give them the tools to stand a fighting chance when losing devices and their data. Available as a premium solution for Android users worldwide.
+          </p>
         </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">Proven Results</h4>
-        <p class="text-slate-600">Measurable improvements from day one</p>
-      </div>
-      <div class="text-center">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">24/7 Support</h4>
-        <p class="text-slate-600">Always available when you need us</p>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
 
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-up-fade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
+  }
+
+  .hover\:shadow-3xl:hover {
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+</style>

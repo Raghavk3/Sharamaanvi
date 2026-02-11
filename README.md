@@ -10,7 +10,7 @@ A modern, professional Astro.js template for logistics, manufacturing, and suppl
 ## 🖼️ Preview
 
 ### Website Screenshot
-<img alt="AstroFlow Website Preview" src="./public/AstroFlow - Astrojs Logistics & Manufacturing Website Template.png" />
+<img alt="ATMT pro Website Preview" src="./public/AstroFlow - Astrojs Logistics & Manufacturing Website Template.png" />
 
 ### Performance & Speed
 <img alt="Performance Metrics" src="./public/speed-metrics.png" />
@@ -78,7 +78,7 @@ export const SITE = {
 export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/company/yourcompany', // TODO: Replace with your LinkedIn
   twitter: 'https://twitter.com/yourcompany', // TODO: Replace with your Twitter
-  facebook: 'https://facebook.com/yourcompany', // TODO: Replace with your Facebook
+  facebook: 'https://www.facebook.com/atmthub/?_rdr', // TODO: Replace with your Facebook
 } as const;
 ```
 
