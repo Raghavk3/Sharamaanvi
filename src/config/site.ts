@@ -1,7 +1,7 @@
 // Site configuration
 export const SITE = {
   title: 'ATMT pro',
-  description: 'Leading provider of optimized logistics and manufacturing solutions with state-of-the-art facilities and industry expertise.',
+  description: 'leading digital security firm specializing in mobile security solutions, data protection, and secure devices.',
   url: 'https://yourdomain.com',
   author: 'Sharamaanvi',
 } as const;
@@ -15,8 +15,8 @@ export const NAVIGATION = [
 ] as const;
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://linkedin.com/company/yourcompany',
-  twitter: 'https://twitter.com/yourcompany',
+  linkedin: 'https://www.instagram.com/sharamaanvi.in/',
+  twitter: 'https://www.instagram.com/sharamaanvi.in/',
   facebook: 'https://www.facebook.com/profile.php?id=61583384643740',
 } as const;
 

@@ -6,7 +6,6 @@ interface Props {
     quote: string;
     name: string;
     role: string;
-    image: ImageMetadata;
     ringColor: string;
   };
   variant?: 'default' | 'home';
@@ -47,7 +46,7 @@ const roleClasses = variant === 'home'
     "{testimonial.quote}"
   </p>
   <div class="flex items-center mt-auto">
-    <div class={`w-12 h-12 rounded-full overflow-hidden mr-4 ring-2 ${testimonial.ringColor}`}>
+    <!-- <div class={`w-12 h-12 rounded-full overflow-hidden mr-4 ring-2 ${testimonial.ringColor}`}>
       <Image 
         src={testimonial.image}
         alt={testimonial.name}
@@ -55,7 +54,7 @@ const roleClasses = variant === 'home'
         width={48}
         height={48}
       />
-    </div>
+    </div> -->
     <div>
       <div class={nameClasses}>{testimonial.name}</div>
       <div class={roleClasses}>{testimonial.role}</div>

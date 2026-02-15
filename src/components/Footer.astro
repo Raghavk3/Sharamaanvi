@@ -1,6 +1,6 @@
 ---
 import { NAVIGATION, SOCIAL_LINKS, SITE } from '@config/site';
-import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Package, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 ---
 
 <footer class="bg-slate-900 text-slate-300">
@@ -30,9 +30,9 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
           <a
             href={SOCIAL_LINKS.twitter}
             class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-blue-400 hover:text-white transition-all"
-            aria-label="Twitter"
+            aria-label="Instagram"
           >
-            <Twitter className="w-5 h-5" />
+            <Instagram className="w-5 h-5" />
           </a>
           <a
             href={SOCIAL_LINKS.facebook}
@@ -71,27 +71,15 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
         </h3>
         <ul class="space-y-3">
           <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href="https://forms.gle/qvjgupwM7wHZvvxf6" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Warehousing & Storage
+              Careers
             </a>
           </li>
           <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href="https://forms.gle/REuUZv4Kmuyi92Xc9  " class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Transportation
-            </a>
-          </li>
-          <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Manufacturing
-            </a>
-          </li>
-          <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Supply Chain Management
+              Business enquiry
             </a>
           </li>
         </ul>
@@ -103,13 +91,7 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
           Get Started
         </h3>
         <ul class="space-y-3 text-sm">
-          <li>
-            <a href="/rfq" class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Request a Quote
-            </a>
-          </li>
-          <li>
+          <!-- <li>
             <a href="/facilities" class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
               Find a Facility
@@ -120,7 +102,7 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
               Documentation
             </a>
-          </li>
+          </li> -->
         </ul>
         
         <div class="mt-8">
@@ -137,15 +119,27 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
     <!-- Bottom Bar -->
     <div class="mt-16 pt-8 border-t border-slate-800">
       <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        <p class="text-sm text-slate-400">
-          &copy; {new Date().getFullYear()} {SITE.author}. All rights reserved.
-        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <p class="text-sm text-slate-400">
+            &copy; {new Date().getFullYear()} {SITE.author}. All rights reserved.
+          </p>
+          <span class="hidden sm:inline text-slate-700">•</span>
+          <a 
+            href="https://www.redzinr.in" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-slate-400 hover:text-blue-400 transition-colors group inline-flex items-center gap-1"
+          >
+            <span>Designed by</span>
+            <span class="font-semibold text-blue-400 group-hover:text-blue-300">Re.Dzinr</span>
+          </a>
+        </div>
         <div class="flex items-center space-x-6 text-sm">
-          <a href="/" class="text-slate-400 hover:text-blue-400 transition-colors">
+          <a href="/use-cases" class="text-slate-400 hover:text-blue-400 transition-colors">
             Privacy Policy
           </a>
           <span class="text-slate-700">•</span>
-          <a href="/" class="text-slate-400 hover:text-blue-400 transition-colors">
+          <a href="/facilities" class="text-slate-400 hover:text-blue-400 transition-colors">
             Terms of Service
           </a>
           <span class="text-slate-700">•</span>
