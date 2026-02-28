@@ -18,5 +18,6 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.instagram.com/sharamaanvi.in/',
   twitter: 'https://www.instagram.com/sharamaanvi.in/',
   facebook: 'https://www.facebook.com/profile.php?id=61583384643740',
+  youtube:  'https://youtube.com/@sharamaanvi?si=TlKAh9Zf937AkuVh',
 } as const;
 

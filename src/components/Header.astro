@@ -38,15 +38,26 @@ const isActiveLink = (href: string) : boolean => { return href === currentPathna
       })}
     </div>
 
-    <!-- CTA Button -->
-    <div class="hidden lg:flex lg:items-center lg:space-x-4">
-      <a
-        href="https://wa.me/9000186328"
-        class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md hover:shadow-lg transition-all"
-      >
-      Contact Us
-      </a>
-    </div>
+    <!-- CTA Buttons -->
+<div class="hidden lg:flex lg:items-center lg:space-x-4">
+  <!-- Careers Button -->
+  <a
+    href="https://forms.gle/qvjgupwM7wHZvvxf6"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-blue-700 border border-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+  >
+    Careers
+  </a>
+
+  <!-- Contact Us Button -->
+  <a
+    href="https://wa.me/9000186328"
+    class="inline-flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md hover:shadow-lg transition-all"
+  >
+    Contact Us
+  </a>
+</div>
 
     <!-- Mobile Menu Button -->
     <MobileMenu client:idle />
